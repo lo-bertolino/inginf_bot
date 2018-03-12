@@ -32,8 +32,8 @@ if(strpos($text, "/start") === 0)
 Puoi utilizzare il bot in più modi:
 -inserendo manualmente il codice dell'esame (ad esempio '18AULOA', senza apici),
 -inserendo un'abbreviazione, ad esempio /apa.
-Se hai bisogno del gruppo dei Rappresentanti degli Studenti, puoi trovarlo scrivendo 'rappresentanti' (senza apici), oppure tramite il comando /rappr.
-Se sei alla ricerca di un gruppo generale sul tirocinio (triennale), usa subito il comando /tir, oppure scrivi semplicemente 'tirocinio'.
+Se hai bisogno del gruppo dei Rappresentanti degli Studenti, puoi trovarlo scrivendo `rappresentanti`, oppure tramite il comando /rappr.
+Per un gruppo sulla compravendita di libri o appunti, parlatene su /libri. Se sei alla ricerca di un gruppo generale sul tirocinio (triennale), usa subito il comando /tir, oppure scrivi semplicemente 'tirocinio'.
 Se invece vuoi un gruppo per parlare di qualsiasi cosa (cazzeggio), vai al /bar usando questo comando. ;)
 
 Non conoscete tutte le abbreviazioni o i codici? Nessun problema! Potete generare una lista di tutti i corsi per i quali è disponibile un gruppo seguendo le istruzioni di seguito (il bot NON è case sensitive, per cui potete scrivere come volete):
@@ -704,6 +704,26 @@ elseif(strpos($text, "/lat") === 0 || $text=="01njaoa")
    $response = "Link gruppo Sicurezza e legislazione dell'ambiente e del territorio: https://t.me/joinchat/AWHhTVJ5F_4oRtNhHwkCSw";
 }
 
+//----------------------------------------------------------------------------------------
+//	ALTRI GRUPPI (BAR, RAPPRESENTANTI, TIROCINIO)
+//----------------------------------------------------------------------------------------
+
+elseif(strpos($text, "/bar") === 0 || $text=="cazzeggio")
+{
+	$response = "Link gruppo Bar Corinto: https://t.me/joinchat/AWHhTT7puKoVi_n-L43e1A";
+}
+elseif(strpos($text, "/rappr") === 0 || $text=="rappresentanti")
+{
+	$response = "Link gruppo per segnalazioni ai Rappresentanti degli Studenti di Ingegneria Informatica: https://t.me/joinchat/AAAAAEQPNY4huYYBbDOcLQ";
+}
+elseif(strpos($text, "/tir") === 0 || $text=="tirocinio")
+{
+	$response = "Link gruppo Tirocinio (triennale): https://t.me/joinchat/ArB62At04ai_qE0UWvXbxQ";
+}
+elseif(strpos($text, "/libri") === 0 || $text=="libri")
+{
+	$response = "Link gruppo compravendita libri e appunti: https://t.me/joinchat/AWHhTUmEZ0LiDxFNxK2dEA";
+}
 
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
