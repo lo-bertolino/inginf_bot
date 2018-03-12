@@ -85,7 +85,28 @@ CREDITI LIBERI
 /rsc - Reti e sistemi complessi: fenomeni fisici e interazioni sociali (01QFXOA)
 
 /inc - Inclusive design nelle scienze dell'architettura e dell'ingegneria (01SAMOA)
-/lat - Sicurezza e legislazione dell'ambiente e del territorio (01NJAOA)"
+/lat - Sicurezza e legislazione dell'ambiente e del territorio (01NJAOA)
+
+
+ENGLISH COURSES
+YEAR 2
+/engalg - Algorithms and Programming (02OGDLM)
+/engcth - Circuit Theory (02OFZLM)
+/engma2 - Mathematical Analysis II (03KXULM)
+/engph2 - Physics II (02KXWLM)
+/engarc - Computer Architectures (02KTMLM)
+/engidb - Introduction to Databases (01RKWLM)
+/engmme - Mathematical Methods (04LSILM)
+/engoop - Object Oriented Programming (04JEYLM)
+
+YEAR 3
+/engnet - Computer Networks (05KSILM)
+/engesm - Electronic Systems, Technologies and Measurements (01QXWLM)
+/engoss - Operating Systems (04JEZLM)
+/engsap - Signal Analysis and Processing (02OGGLM)
+/engael - Applied Electronics (03MZGLM)
+/engctr - Automatic Control (06LSLLM)
+"
 ;
 }
 elseif(strpos($text, "/magistrale") === 0 || $text=="lm")
@@ -374,7 +395,83 @@ elseif(strpos($text, "/stm") === 0 || $text=="01qxvoa")
 	{
 		$response = "Link gruppo Teoria dei Segnali e delle Comunicazioni (corso da 10 crediti, Ingegneria Elettronica): https://t.me/joinchat/AWHhTUNm_uMTfFJYSO7phw";
 	}
-	
+
+//----------------------------------------------------------------------------------------
+//	CORSI TRIENNALE (INGLESE)
+//----------------------------------------------------------------------------------------
+
+elseif(strpos($text, "/engalg") === 0 || $text=="02ogdlm")
+{
+	$response = "Link to the group Algorithms and Programming: https://t.me/joinchat/AWHhTVDwMJ5Oq8OUqALwyA";
+}
+elseif(strpos($text, "/engcth") === 0 || $text=="02ofzlm")
+{
+	$response = "Link to the group Circuit Theory: https://t.me/joinchat/AWHhTVJERkuPvOnuP0DKNw";
+}
+elseif(strpos($text, "/engma2") === 0 || $text=="03kxulm")
+{
+	$response = "Link to the group Mathematical Analysis II: https://t.me/joinchat/AWHhTUR8n0FbqRdLI1Fvbw";
+}
+elseif(strpos($text, "/engph2") === 0 || $text=="02kxwlm")
+{
+	$response = "Link to the group Physics II: https://t.me/joinchat/AWHhTUYr6p2tvvJYVL84Iw";
+}
+elseif(strpos($text, "/engarc") === 0 || $text=="02ktmlm")
+{
+        $response = "Link to the group Computer Architectures: https://t.me/joinchat/AWHhTUikUB8uHnGM7OXCIg";
+}
+elseif(strpos($text, "/engidb") === 0 || $text=="01rkwlm")
+{
+        $response = "Link to the group Introduction to Databases: https://t.me/joinchat/AWHhTVF7uJ9ZfhiZLuMmJw";
+}
+elseif(strpos($text, "/engmme") === 0 || $text=="04lsilm")
+{
+        $response = "Link to the group Mathematical Methods: https://t.me/joinchat/AWHhTULOFNQ5AGfoufhduA";
+}
+elseif(strpos($text, "/engoop") === 0 || $text=="04jeylm")
+{
+        $response = "Link to the group Object Oriented Programming: https://t.me/joinchat/AWHhTUyb9a4zv2wpKCbkfA";
+}
+
+elseif(strpos($text, "/engnet") === 0 || $text=="05ksilm")
+{
+        $response = "Link to the group Computer Networks: https://t.me/joinchat/AWHhTUomL7dw-oQ5Ll9rwA";
+}
+elseif(strpos($text, "/engesm") === 0 || $text=="01qxwlm")
+{
+        $response = "Link to the group Electronic Systems, Technologies and Measurements: https://t.me/joinchat/AWHhTUlTn2711XWBDvfTew";
+}
+elseif(strpos($text, "/engoss") === 0 || $text=="04jezlm")
+{
+        $response = "Link to the group Operting Systems: https://t.me/joinchat/AWHhTVKjMNLLRymIk6BkPQ";
+}
+elseif(strpos($text, "/engsap") === 0 || $text=="04jezlm")
+{
+        $response = "Link to the group Signal Analysis and Processing: https://t.me/joinchat/AWHhTVGAuGeF-ysnlluRog";
+}
+elseif(strpos($text, "/engael") === 0 || $text=="03mzglm")
+{
+        $response = "Link to the group Applied Electronics: https://t.me/joinchat/AWHhTUXy03Z2hB6ptas5eA";
+}
+elseif(strpos($text, "/engctr") === 0 || $text=="06lsllm")
+{
+        $response = "Link to the group Automatic Control: https://t.me/joinchat/AWHhTUu7VarTVqlRt6sNnA";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //----------------------------------------------------------------------------------------
 //	CORSI MAGISTRALE
 //----------------------------------------------------------------------------------------
@@ -607,22 +704,7 @@ elseif(strpos($text, "/lat") === 0 || $text=="01njaoa")
    $response = "Link gruppo Sicurezza e legislazione dell'ambiente e del territorio: https://t.me/joinchat/AWHhTVJ5F_4oRtNhHwkCSw";
 }
 
-//----------------------------------------------------------------------------------------
-//	ALTRI GRUPPI (BAR, RAPPRESENTANTI, TIROCINIO)
-//----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/bar") === 0 || $text=="cazzeggio")
-{
-	$response = "Link gruppo Bar Corinto: https://t.me/joinchat/AWHhTT7puKoVi_n-L43e1A";
-}
-elseif(strpos($text, "/rappr") === 0 || $text=="rappresentanti")
-{
-	$response = "Link gruppo per segnalazioni ai Rappresentanti degli Studenti di Ingegneria Informatica: https://t.me/joinchat/AAAAAEQPNY4huYYBbDOcLQ";
-}
-elseif(strpos($text, "/tir") === 0 || $text=="tirocinio")
-{
-	$response = "Link gruppo Tirocinio (triennale): https://t.me/joinchat/ArB62At04ai_qE0UWvXbxQ";
-}
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
