@@ -619,7 +619,7 @@ elseif(strpos($text, "/infg") === 0 || $text=="02bhiov")
 }
 elseif(strpos($text, "/can") === 0 || $text=="01npzov")
 {
-	$response = "Link gruppo Computer Animation: https://t.me/joinchat/AWHhTUPaE0q_oPS6kbM7YQ";
+	$response = "Link gruppo Computer Animation: https://t.me/joinchat/AWHhTUL8DASAciXmc5HwMA";
 }
 elseif(strpos($text, "/msp") === 0 || $text=="01npzov")
 {
