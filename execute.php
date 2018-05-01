@@ -32,9 +32,10 @@ if(strpos($text, "/start") === 0)
 Puoi utilizzare il bot in più modi:
 -inserendo manualmente il codice dell'esame (ad esempio '18AULOA', senza apici),
 -inserendo un'abbreviazione, ad esempio /apa.
+Se vuoi un gruppo per parlare di qualsiasi cosa (cazzeggio), vai al /bar usando questo comando. ;)
 Se hai bisogno del gruppo dei Rappresentanti degli Studenti, puoi trovarlo scrivendo `rappresentanti`, oppure tramite il comando /rappr.
 Per un gruppo sulla compravendita di libri o appunti, parlatene su /libri, mentre se avete bisogno di ripetizioni, andaandate su /ripetizioni. Se sei alla ricerca di un gruppo generale sul tirocinio (triennale), usa subito il comando /tir, oppure scrivi semplicemente 'tirocinio'.
-Se invece vuoi un gruppo per parlare di qualsiasi cosa (cazzeggio), vai al /bar usando questo comando. ;)
+Ho anche creato un canale per chi vuole seguire i cambiamenti del bot (/changelog).
 
 Non conoscete tutte le abbreviazioni o i codici? Nessun problema! Potete generare una lista di tutti i corsi per i quali è disponibile un gruppo seguendo le istruzioni di seguito (il bot NON è case sensitive, per cui potete scrivere come volete):
 
@@ -728,7 +729,10 @@ elseif(strpos($text, "/ripetizioni") === 0 || $text=="ripetizioni")
 {
 	$response = "Link gruppo cerco o offro ripetizioni: https://t.me/joinchat/AWHhTUMgrCpThX8coTPN6g";
 }
-
+elseif(strpos($text, "/changelog") === 0 || $text=="changelog")
+{
+	$response = "Link canale per aggiornamenti sul bot: https://t.me/joinchat/AAAAAEfq4quRqMjvfLiMAg";
+}
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
