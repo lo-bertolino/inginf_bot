@@ -2,8 +2,7 @@
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
-if(!$update)
-{
+if(!$update) {
   exit;
 }
 
@@ -15,19 +14,16 @@ $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name']
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
-
 $text = trim($text);
 $text = strtolower($text);
 header("Content-Type: application/json");
-
 $response = '';
 
 //========================================================================================
 //	START: Guida, triennale/magistrale (elenco corsi)
 //========================================================================================
 
-if(strpos($text, "/start") === 0)
-{
+if($text == "/start") {
 	$response = "Ciao $firstname, benvenuto/a!
 Puoi utilizzare il bot in più modi:
 -inserendo manualmente il codice dell'esame (ad esempio '18AULOA', senza apici),
@@ -42,8 +38,7 @@ Non conoscete tutte le abbreviazioni o i codici? Nessun problema! Potete generar
 
 Desideri il link per i corsi di laurea triennale o magistrale? Usa il comando '/triennale' o '/magistrale', oppure scrivi semplicemente 'L' o 'LM'.";
 }
-elseif(strpos($text, "/triennale") === 0 || $text=="l")
-{
+elseif($text == "/triennale" || $text=="l") {
     $response = "Bene, ecco una lista con i vari codici:
 Link al gruppo generale: https://t.me/IngInfTriennale
 
@@ -110,8 +105,7 @@ YEAR 3
 "
 ;
 }
-elseif(strpos($text, "/magistrale") === 0 || $text=="lm")
-{
+elseif($text == "/magistrale" || $text=="lm") {
     $response = "A quale indirizzo appartieni?
 /aut - Automatica
 /dat - Data Science
@@ -127,8 +121,7 @@ Se cerchi il link al gruppo generale per le magistrali, lo trovi qui: https://t.
 //	MAGISTRALI
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/aut") === 0)
-{
+elseif($text == "/aut") {
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Automatica): https://t.me/joinchat/AWHhTURKgyOJ1D7d6WP2wg
 
@@ -151,8 +144,7 @@ iii) /saa - Software Architecture for Automation (01PECOV)
 /rob - Robotica (04CFIOV)
 /est - Estimation, Filtering, and System Identification (01RKYOV)";
 }
-elseif(strpos($text, "/dat") === 0)
-{
+elseif($text == "/dat") {
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Data Science): https://t.me/joinchat/AWHhTQ66iEgxxMnTFXqfjQ
 
@@ -174,8 +166,7 @@ i) /app - Applicazioni Internet (02JGROV)
 ii) /swd - Interdisciplinary Software Design Project (01RMZOV)
 iii) /mad -Mobile Application Development (01PFPOV)";
 }
-elseif(strpos($text, "/emb") === 0)
-{  
+elseif($text == "/emb") {  
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Embedded Systems): https://t.me/joinchat/AWHhTUA7Khy9tYQA_5jOUw
 
@@ -195,8 +186,7 @@ II ANNO
 /tft - Testing and Fault Tolerance (01RKZOV)
 /sdp - System Design Project (01RLAOV)";
 }
-elseif(strpos($text, "/mul") === 0)
-{  
+elseif($text == "/mul") {  
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Grafica e Multimedia): https://t.me/joinchat/AWHhTUMvFkikgpfQKb6EtA
 
@@ -223,8 +213,7 @@ iii) /rvir - Realtà Virtuale (02KVEOV)
 i) /can - Computer Animation (01NPZOV)
 ii) /msp - Multimedia Signal Processing (01QFSOV)";
 }
-elseif(strpos($text, "/net") === 0)
-{
+elseif($text == "/net") {
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Reti): https://t.me/joinchat/AWHhTUNZJ7XpXMpjoMOXXg
 
@@ -251,8 +240,7 @@ i) /app - Applicazioni Internet (02JGROV)
 ii) /imul - Elaborazione e Trasmissione di Informazioni Multimediali (02GPJOV)
 iii) /mad -Mobile Application Development (01PFPOV)";
 }
-elseif(strpos($text, "/soft") === 0)
-{
+elseif($text == "/soft") {
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Software): https://t.me/joinchat/AWHhTUGPMG-KizTjRVAlzQ
 
@@ -275,8 +263,7 @@ iii) /imul - Elaborazione e Trasmissione di Informazioni Multimediali (02GPJOV)
 iv) /swd - Interdisciplinary Software Design Project (01RMZOV)
 v) /mad -Mobile Application Development (01PFPOV)";
 }
-elseif(strpos($text, "/sds") === 0)
-{
+elseif($text == "/sds") {
     $response = "Bene, ecco una lista con i vari codici:
 Link gruppo principale (LM Software e Sistemi Digitali): https://t.me/joinchat/AWHhTUG4UmF1GKZlQMS-2A
 
@@ -310,36 +297,28 @@ v) /sdp - System Design Project (01RLAOV)";
 //	CORSI TRIENNALE II ANNO
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/apa") === 0 || $text=="03mnooa")
-{
+elseif($text == "/apa" || $text=="03mnooa") {
 	$response = "Link gruppo Algoritmi e Programmazione: https://t.me/joinchat/AAAAAEHJKLIFYe4H8DyAsw";
 }
-elseif(strpos($text, "/elt") === 0 || $text=="18auloa")
-{
+elseif($text == "/elt" || $text=="18auloa") {
 	$response = "Link gruppo Elettrotecnica: https://t.me/joinchat/AAAAAD9BpcnchBLUEnioVQ";
 }
-elseif(strpos($text, "/cae") === 0 || $text=="12agaoa")
-{
+elseif($text == "/cae" || $text=="12agaoa") {
 	$response = "Link gruppo Calcolatori Elettronici: https://t.me/joinchat/AAAAAEJuFpWQh_MlqR-dqQ";
 }
-elseif(strpos($text, "/an2") === 0 || $text=="23acioa")
-{
+elseif($text == "/an2" || $text=="23acioa") {
 	$response = "Link gruppo Analisi II: https://t.me/joinchat/AAAAAD-5K7MDuHb7okBIrw";
 }
-elseif(strpos($text, "/met") === 0 || $text=="06bqxoa")
-{
+elseif($text == "/met" || $text=="06bqxoa") {
 	$response = "Link gruppo Metodi Matematici per l'Ingegneria: https://t.me/joinchat/AAAAAEB7eu7kwNY1flGUTw";
 }
-elseif(strpos($text, "/fis2") === 0 || $text=="03axpoa")
-{
+elseif($text == "/fis2" || $text=="03axpoa") {
 	$response = "Link gruppo Fisica II: https://t.me/joinchat/AAAAAEI4s2zTMZiN55Ccuw";
 }
-elseif(strpos($text, "/bda") === 0 || $text=="14afqoa")
-{
+elseif($text == "/bda" || $text=="14afqoa") {
 	$response = "Link gruppo Basi di Dati: https://t.me/joinchat/AWHhTUKBnKp-ImghkayQUw";
 }
-elseif(strpos($text, "/oop") === 0 || $text=="09cbioa")
-{
+elseif($text == "/oop" || $text=="09cbioa") {
 	$response = "Link gruppo Programmazione a Oggetti: https://t.me/joinchat/AWHhTUGhuCoTqgsfyEMRpQ";
 }
 
@@ -347,36 +326,28 @@ elseif(strpos($text, "/oop") === 0 || $text=="09cbioa")
 //	CORSI TRIENNALE III ANNO
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/eapp") === 0 || $text=="08atioa")
-{
+elseif($text == "/eapp" || $text=="08atioa") {
 	$response = "Link gruppo Elettronica Applicata: https://t.me/joinchat/AWHhTUJ1hBm_rp8qI0EJAA";
 }
-elseif(strpos($text, "/eam") === 0 || $text=="03moaoa")
-{
+elseif($text == "/eam" || $text=="03moaoa") {
 	$response = "Link gruppo Elettronica Applicata e Misure (corso da 10 crediti): https://t.me/joinchat/AWHhTT5FCYe0hB6IUJXoZw";
 }
-elseif(strpos($text, "/cir") === 0 || $text=="02oignx")
-{
+elseif($text == "/cir" || $text=="02oignx") {
 	$response = "Link gruppo Electronic Circuits (corso da 10 crediti, Ingegneria Elettronica/ECE): https://t.me/joinchat/AWHhTURqgvY3Gp3VivBfgA";
 }
-elseif(strpos($text, "/sop") === 0 || $text=="05cjcoa")
-{
+elseif($text == "/sop" || $text=="05cjcoa") {
 	$response = "Link gruppo Sistemi Operativi: https://t.me/joinchat/AWHhTT-Vihh0I05WwX1Aaw";
 }
-elseif(strpos($text, "/reti") === 0 || $text=="12cduoa")
-{
+elseif($text == "/reti" || $text=="12cduoa") {
 	$response = "Link gruppo Reti di Calcolatori: https://t.me/joinchat/AWHhTUBMQiRlNy8eoYtNew";
 }
-elseif(strpos($text, "/tes") === 0 || $text=="02moooa")
-{
+elseif($text == "/tes" || $text=="02moooa") {
 	$response = "Link gruppo Teoria ed Elaborazione dei Segnali: https://t.me/joinchat/AWHhTUPuGqC7DZATBQZnrw";
 }
-elseif(strpos($text, "/cau") === 0 || $text=="18aksoa")
-{
+elseif($text == "/cau" || $text=="18aksoa") {
 	$response = "Link gruppo Controlli Automatici: https://t.me/joinchat/AWHhTUGegJC71E_pLMloJg";
 }
-elseif(strpos($text, "/stm") === 0 || $text=="01qxvoa")
-{
+elseif($text == "/stm" || $text=="01qxvoa") {
 	$response = "Link gruppo Sistemi Elettronici, Tecnologie e Misure: https://t.me/joinchat/AWHhTULsNdVmOVv2H9cphQ";
 }
 
@@ -384,15 +355,15 @@ elseif(strpos($text, "/stm") === 0 || $text=="01qxvoa")
 	//	CORSI TRIENNALE IN FASE DI SPEGNIMENTO (OPPURE NON DI ING. INF) (III ANNO)
 	//························································································
 	
-	elseif(strpos($text, "/ste") === 0 || $text=="01nvaoa")
+	elseif($text == "/ste" || $text=="01nvaoa")
 	{
 		$response = "Link gruppo Sistemi e Tecnologie Elettroniche: https://t.me/joinchat/AAAAAD__AD2-iXQW1EBuZQ";
 	}
-	elseif(strpos($text, "/ts2") === 0 || $text=="01moooa")
+	elseif($text == "/ts2" || $text=="01moooa")
 	{	
 		$response = "Link gruppo Teoria ed Elaborazione dei Segnali (corso da 10 crediti): https://t.me/joinchat/AWHhTUDvj28xdfBC9PDzNw";
 	}
-	elseif(strpos($text, "/tsc") === 0 || $text=="01nvcnx")
+	elseif($text == "/tsc" || $text=="01nvcnx")
 	{
 		$response = "Link gruppo Teoria dei Segnali e delle Comunicazioni (corso da 10 crediti, Ingegneria Elettronica): https://t.me/joinchat/AWHhTUNm_uMTfFJYSO7phw";
 	}
@@ -401,61 +372,47 @@ elseif(strpos($text, "/stm") === 0 || $text=="01qxvoa")
 //	CORSI TRIENNALE (INGLESE)
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/engalg") === 0 || $text=="02ogdlm")
-{
+elseif($text == "/engalg" || $text=="02ogdlm") {
 	$response = "Link to the group Algorithms and Programming: https://t.me/joinchat/AWHhTVDwMJ5Oq8OUqALwyA";
 }
-elseif(strpos($text, "/engcth") === 0 || $text=="02ofzlm")
-{
+elseif($text == "/engcth" || $text=="02ofzlm") {
 	$response = "Link to the group Circuit Theory: https://t.me/joinchat/AWHhTVJERkuPvOnuP0DKNw";
 }
-elseif(strpos($text, "/engma2") === 0 || $text=="03kxulm")
-{
+elseif($text == "/engma2" || $text=="03kxulm") {
 	$response = "Link to the group Mathematical Analysis II: https://t.me/joinchat/AWHhTUR8n0FbqRdLI1Fvbw";
 }
-elseif(strpos($text, "/engph2") === 0 || $text=="02kxwlm")
-{
+elseif($text == "/engph2" || $text=="02kxwlm") {
 	$response = "Link to the group Physics II: https://t.me/joinchat/AWHhTUYr6p2tvvJYVL84Iw";
 }
-elseif(strpos($text, "/engarc") === 0 || $text=="02ktmlm")
-{
+elseif($text == "/engarc" || $text=="02ktmlm") {
         $response = "Link to the group Computer Architectures: https://t.me/joinchat/AWHhTUikUB8uHnGM7OXCIg";
 }
-elseif(strpos($text, "/engidb") === 0 || $text=="01rkwlm")
-{
+elseif($text == "/engidb" || $text=="01rkwlm") {
         $response = "Link to the group Introduction to Databases: https://t.me/joinchat/AWHhTVF7uJ9ZfhiZLuMmJw";
 }
-elseif(strpos($text, "/engmme") === 0 || $text=="04lsilm")
-{
+elseif($text == "/engmme" || $text=="04lsilm") {
         $response = "Link to the group Mathematical Methods: https://t.me/joinchat/AWHhTULOFNQ5AGfoufhduA";
 }
-elseif(strpos($text, "/engoop") === 0 || $text=="04jeylm")
-{
+elseif($text == "/engoop" || $text=="04jeylm") {
         $response = "Link to the group Object Oriented Programming: https://t.me/joinchat/AWHhTUyb9a4zv2wpKCbkfA";
 }
 
-elseif(strpos($text, "/engnet") === 0 || $text=="05ksilm")
-{
+elseif($text == "/engnet" || $text=="05ksilm") {
         $response = "Link to the group Computer Networks: https://t.me/joinchat/AWHhTUomL7dw-oQ5Ll9rwA";
 }
-elseif(strpos($text, "/engesm") === 0 || $text=="01qxwlm")
-{
+elseif($text == "/engesm" || $text=="01qxwlm") {
         $response = "Link to the group Electronic Systems, Technologies and Measurements: https://t.me/joinchat/AWHhTUlTn2711XWBDvfTew";
 }
-elseif(strpos($text, "/engoss") === 0 || $text=="04jezlm")
-{
+elseif($text == "/engoss" || $text=="04jezlm") {
         $response = "Link to the group Operting Systems: https://t.me/joinchat/AWHhTVKjMNLLRymIk6BkPQ";
 }
-elseif(strpos($text, "/engsap") === 0 || $text=="04jezlm")
-{
+elseif($text == "/engsap" || $text=="04jezlm") {
         $response = "Link to the group Signal Analysis and Processing: https://t.me/joinchat/AWHhTVGAuGeF-ysnlluRog";
 }
-elseif(strpos($text, "/engael") === 0 || $text=="03mzglm")
-{
+elseif($text == "/engael" || $text=="03mzglm") {
         $response = "Link to the group Applied Electronics: https://t.me/joinchat/AWHhTUXy03Z2hB6ptas5eA";
 }
-elseif(strpos($text, "/engctr") === 0 || $text=="06lsllm")
-{
+elseif($text == "/engctr" || $text=="06lsllm") {
         $response = "Link to the group Automatic Control: https://t.me/joinchat/AWHhTUu7VarTVqlRt6sNnA";
 }
 
@@ -478,184 +435,139 @@ elseif(strpos($text, "/engctr") === 0 || $text=="06lsllm")
 //----------------------------------------------------------------------------------------
 
 	
-elseif(strpos($text, "/ase") === 0 || $text=="02golov" || $text=="02lseov")
-{
+elseif($text == "/ase" || $text=="02golov" || $text=="02lseov") {
 	$response = "Link gruppo Architetture dei Sistemi di Elaborazione - Computer architectures: https://t.me/joinchat/AWHhTURjlmKrmEATdPn9pw";
 }
-elseif(strpos($text, "/dms") === 0 || $text=="01nvvov" || $text=="01nvuov")
-{
+elseif($text == "/dms" || $text=="01nvvov" || $text=="01nvuov") {
 	$response = "Link gruppo Sistemi per la Gestione di Basi di Dati - Database Management Systems: https://t.me/joinchat/AWHhTUPmlkk3NGwiyBwH3g";
 }
-elseif(strpos($text, "/tsr") === 0 || $text=="02kpnov" || $text=="01otwov")
-{
+elseif($text == "/tsr" || $text=="02kpnov" || $text=="01otwov") {
 	$response = "Link gruppo Tecnologie e Servizi di Rete - Computer Network Technologies and Services: https://t.me/joinchat/AWHhTUMRFDzAiBNEDwB22Q";
 }
-elseif(strpos($text, "/mod") === 0 || $text=="01nneov")
-{
+elseif($text == "/mod" || $text=="01nneov") {
 	$response = "Link gruppo Modelli e Sistemi a Eventi Discreti: https://t.me/joinchat/AWHhTUPsL97g4IGggoJFig";
 }
-elseif(strpos($text, "/copt") === 0 || $text=="01ouwov")
-{
+elseif($text == "/copt" || $text=="01ouwov") {
 	$response = "Link gruppo Convex Optimization and Engineering Applications: https://t.me/joinchat/AWHhTUIrWgfwr2Y4NBWaJw";
 }
-elseif(strpos($text, "/swe") === 0 || $text=="05bidov" || $text=="04gspov")
-{
+elseif($text == "/swe" || $text=="05bidov" || $text=="04gspov") {
 	$response = "Link gruppo Ingegneria del Software - Software Engineering: https://t.me/joinchat/AWHhTUO1VW4d5BI_bfVVZg";
 }
-elseif(strpos($text, "/nlc") === 0 || $text=="01rkxov")
-{
+elseif($text == "/nlc" || $text=="01rkxov") {
 	$response = "Link gruppo Nonlinear Control and Aerospace Applications: https://t.me/joinchat/AWHhTUPY8S9IzWMk495LUA";
 }
-elseif(strpos($text, "/pst") === 0 || $text=="02grsov" || $text=="01nyhov")
-{
+elseif($text == "/pst" || $text=="02grsov" || $text=="01nyhov") {
 	$response = "Link gruppo Programmazione di Sistema - System and Device Programming: https://t.me/joinchat/AWHhTUKL2mCjq7SyuVbD8Q";
 }
-elseif(strpos($text, "/acs") === 0 || $text=="03miqov")
-{
+elseif($text == "/acs" || $text=="03miqov") {
 	$response = "Link gruppo Automotive Control Systems: https://t.me/joinchat/AWHhTUM7AuEWZNDdRvK96w";
 }
-elseif(strpos($text, "/rob") === 0 || $text=="04cfiov")
-{
+elseif($text == "/rob" || $text=="04cfiov") {
 	$response = "Link gruppo Robotica: https://t.me/joinchat/AWHhTUQGYLLB3lSuCnl3qw";
 }
-elseif(strpos($text, "/est") === 0 || $text=="01rkyov")
-{
+elseif($text == "/est" || $text=="01rkyov") {
 	$response = "Link gruppo Estimation, Filtering, and System Identification: https://t.me/joinchat/AWHhTUPAZsjQq21kQd9fxQ";
 }
-elseif(strpos($text, "/dct") === 0 || $text=="01pdcov")
-{
+elseif($text == "/dct" || $text=="01pdcov") {
 	$response = "Link gruppo Digital Control Technologies and Architectures: https://t.me/joinchat/AWHhTULlHt-cjohj2ANC6w";
 }
-elseif(strpos($text, "/mdcs") === 0 || $text=="01pdxov")
-{
+elseif($text == "/mdcs" || $text=="01pdxov") {
 	$response = "Link gruppo Modern Design of Control Systems: https://t.me/joinchat/AWHhTUNB66W58CJ88Rss7Q";
 }
-elseif(strpos($text, "/saa") === 0 || $text=="01pecov")
-{
+elseif($text == "/saa" || $text=="01pecov") {
 	$response = "Link gruppo Software Architecture for Automation: https://t.me/joinchat/AWHhTUNj9WyIn4kAlZFtBQ";
 }
-elseif(strpos($text, "/isys") === 0 || $text=="01pdwov")
-{
+elseif($text == "/isys" || $text=="01pdwov") {
 	$response = "Link gruppo Information Systems: https://t.me/joinchat/AWHhTUPpBagsQUS0H-6mBw";
 }
-elseif(strpos($text, "/bigd") === 0 || $text=="01qydov")
-{
+elseif($text == "/bigd" || $text=="01qydov") {
 	$response = "Link gruppo Big Data: Architectures and Data Analytics: https://t.me/joinchat/AWHhTUNOnQuT93-l4Tot9g";
 }
-elseif(strpos($text, "/dp1") === 0 || $text=="03mqpov" || $text=="01nvwov")
-{
+elseif($text == "/dp1" || $text=="03mqpov" || $text=="01nvwov") {
 	$response = "Link gruppo Programmazione Distribuita I - Distributed Programming I: https://t.me/joinchat/AWHhTQxBVpvTQutrKIG8hQ";
 }
-elseif(strpos($text, "/sic") === 0 || $text=="03gsdov" || $text=="02krqov")
-{
+elseif($text == "/sic" || $text=="03gsdov" || $text=="02krqov") {
 	$response = "Link gruppo Sicurezza dei Sistemi Informatici - Computer System Security: https://t.me/joinchat/AWHhTQt5GdlO5P8RLvAyCw";
 }
-elseif(strpos($text, "/dp2") === 0 || $text=="01pdvov")
-{
+elseif($text == "/dp2" || $text=="01pdvov") {
 	$response = "Link gruppo Distributed Programming II: https://t.me/joinchat/AWHhTUNK_dNO4V18B6Kvaw";
 }
-elseif(strpos($text, "/iar") === 0 || $text=="01bitov")
-{
+elseif($text == "/iar" || $text=="01bitov") {
 	$response = "Link gruppo Intelligenza Artificiale: https://t.me/joinchat/AWHhTUN4agtRqrzYqvL77Q";
 }
-elseif(strpos($text, "/app") === 0 || $text=="02jgrov")
-{
+elseif($text == "/app" || $text=="02jgrov") {
 	$response = "Link gruppo Applicazioni Internet: https://t.me/joinchat/AWHhTUJzjk5k6B1b9zE8GQ";
 }
-elseif(strpos($text, "/swd") === 0 || $text=="01rmzov")
-{
+elseif($text == "/swd" || $text=="01rmzov") {
 	$response = "Link gruppo Interdisciplinary Software Design Project: https://t.me/joinchat/AWHhTUK9dabZaLd9z0GJfQ";
 }
-elseif(strpos($text, "/mad") === 0 || $text=="01pfpov")
-{
+elseif($text == "/mad" || $text=="01pfpov") {
 	$response = "Link gruppo Mobile Application Development: https://t.me/joinchat/AWHhTUEP8ias1fCdcUWEbw";
 }
-elseif(strpos($text, "/ees") === 0 || $text=="01nwmov")
-{
+elseif($text == "/ees" || $text=="01nwmov") {
 	$response = "Link gruppo Electronics for Embedded Systems: https://t.me/joinchat/AWHhTUSA4kL-LtGmh7tsqw";
 }
-elseif(strpos($text, "/ose") === 0 || $text=="02npsov")
-{
+elseif($text == "/ose" || $text=="02npsov") {
 	$response = "Link gruppo Operating Systems for Embedded Systems: https://t.me/joinchat/AWHhTUMWVK4q7DlUXSsxfQ";
 }
-elseif(strpos($text, "/spec") === 0 || $text=="02lqdov")
-{
+elseif($text == "/spec" || $text=="02lqdov") {
 	$response = "Link gruppo Specification and Simulation of Digital Systems: https://t.me/joinchat/AWHhTUBs2ugzzYBlG01O5A";
 }
-elseif(strpos($text, "/mic") === 0 || $text=="01noyov")
-{
+elseif($text == "/mic" || $text=="01noyov") {
 	$response = "Link gruppo Microelectronic Systems: https://t.me/joinchat/AWHhTUHR0ZM2x4lyKOB41A";
 }
-elseif(strpos($text, "/sods") === 0 || $text=="02nvnov")
-{
+elseif($text == "/sods" || $text=="02nvnov") {
 	$response = "Link gruppo Synthesis and Optimization of Digital Systems: https://t.me/joinchat/AWHhTUJPnnzxDxG_0os8fg";
 }
-elseif(strpos($text, "/ems") === 0 || $text=="01qyoov")
-{
+elseif($text == "/ems" || $text=="01qyoov") {
 	$response = "Link gruppo Energy Management in Mobile Systems: https://t.me/joinchat/AWHhTQvbYx1vIZWd5Hk3cg";
 }
-elseif(strpos($text, "/mes") === 0 || $text=="01nwnov")
-{
+elseif($text == "/mes" || $text=="01nwnov") {
 	$response = "Link gruppo Modeling and Optimization of Embedded Systems: https://t.me/joinchat/AWHhTUMrdejsGdpiuSU-4Q";
 }
-elseif(strpos($text, "/soc") === 0 || $text=="01qyhov")
-{
+elseif($text == "/soc" || $text=="01qyhov") {
 	$response = "Link gruppo System-on-Chip Architecture: https://t.me/joinchat/AWHhTUPjFmWgcVoKZZ1MCA";
 }
-elseif(strpos($text, "/tft") === 0 || $text=="01rkzov")
-{
+elseif($text == "/tft" || $text=="01rkzov") {
 	$response = "Link gruppo Testing and Fault Tolerance: https://t.me/joinchat/AWHhTURP9ddxzHfkAuIwKg";
 }
-elseif(strpos($text, "/sdp") === 0 || $text=="01rlaov")
-{
+elseif($text == "/sdp" || $text=="01rlaov") {
 	$response = "Link gruppo System Design Project: https://t.me/joinchat/AWHhTUFbpvyBXrVK-IYtZg";
 }
-elseif(strpos($text, "/imul") === 0 || $text=="02gpjov")
-{
+elseif($text == "/imul" || $text=="02gpjov") {
 	$response = "Link gruppo Elaborazione e Trasmissione di Informazioni Multimediali: https://t.me/joinchat/AWHhTUO9HK87c9lIbGDLQg";
 }
-elseif(strpos($text, "/infg") === 0 || $text=="02bhiov")
-{
+elseif($text == "/infg" || $text=="02bhiov") {
 	$response = "Link gruppo Informatica Grafica: https://t.me/joinchat/AWHhTUPaE0q_oPS6kbM7YQ";
 }
-elseif(strpos($text, "/can") === 0 || $text=="01npzov")
-{
+elseif($text == "/can" || $text=="01npzov") {
 	$response = "Link gruppo Computer Animation: https://t.me/joinchat/AWHhTUL8DASAciXmc5HwMA";
 }
-elseif(strpos($text, "/msp") === 0 || $text=="01npzov")
-{
+elseif($text == "/msp" || $text=="01npzov") {
 	$response = "Link gruppo Multimedia Signal Processing: https://t.me/joinchat/AWHhTT75pIwnjSInCfbq0w";
 }
-elseif(strpos($text, "/dsp") === 0 || $text=="01rlpov")
-{
+elseif($text == "/dsp" || $text=="01rlpov") {
 	$response = "Link gruppo Data Spaces: https://t.me/joinchat/AWHhTUKeSQsTFCzr5kmXgw";
 }
-elseif(strpos($text, "/oma") === 0 || $text=="01ouvov")
-{
+elseif($text == "/oma" || $text=="01ouvov") {
 	$response = "Link gruppo Optimization Methods and Algorithms: https://t.me/joinchat/AWHhTUJDrXyZ-e7HPTpCwQ";
 }
-elseif(strpos($text, "/cvis") === 0 || $text=="04isfov")
-{
+elseif($text == "/cvis" || $text=="04isfov") {
 	$response = "Link gruppo Computer Vision: https://t.me/joinchat/AWHhTUNOjVKUWjusEKYi5A";
 }
-elseif(strpos($text, "/ead") === 0 || $text=="01nwpov")
-{
+elseif($text == "/ead" || $text=="01nwpov") {
 	$response = "Link gruppo Elaborazione dell'Audio Digitale: https://t.me/joinchat/AWHhTQt7_AggPc9VohR6HA";
 }
-elseif(strpos($text, "/rvir") === 0 || $text=="02kveov")
-{
+elseif($text == "/rvir" || $text=="02kveov") {
 	$response = "Link gruppo Realtà virtuale: https://t.me/joinchat/AWHhTUJJ6SFtoPh6w2BAJA";
 }
-elseif(strpos($text, "/prl") === 0 || $text=="01nvyov")
-{
+elseif($text == "/prl" || $text=="01nvyov") {
 	$response = "Link gruppo Progetto di Reti Locali: https://t.me/joinchat/AWHhTUQ1ZNHIYYOQQvL-lQ";
 }
-elseif(strpos($text, "/par") === 0 || $text=="01nvzov")
-{
+elseif($text == "/par" || $text=="01nvzov") {
 	$response = "Link gruppo Protocolli e Architetture di Routing: https://t.me/joinchat/AWHhTUJh9tnkVhYIR8dNag";
 }
-elseif(strpos($text, "/lan") === 0 || $text=="02jeuov")
-{
+elseif($text == "/lan" || $text=="02jeuov") {
 	$response = "Link gruppo Formal Languages and Compilers: https://t.me/joinchat/AWHhTUGmiW2ivq1_vYj9AA";
 }
 
@@ -663,32 +575,25 @@ elseif(strpos($text, "/lan") === 0 || $text=="02jeuov")
 //	CREDITI LIBERI DEL III ANNO (CONSIGLIATI DAL CORSO DI STUDI)
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/nan") === 0 || $text=="02jnuoa")
-{
+elseif($text == "/nan" || $text=="02jnuoa") {
    $response = "Link gruppo Introduzione alle Nanotecnologie: https://t.me/joinchat/AWHhTUvhWxmxwYidlgB-ww";
 }
-elseif(strpos($text, "/lic") === 0 || $text=="01qzdoa")
-{
+elseif($text == "/lic" || $text=="01qzdoa") {
    $response = "Link gruppo Laboratori di Internet e Comunicazioni: https://t.me/joinchat/AWHhTUpJkSBVrP2afTm4rA";
 }
-elseif(strpos($text, "/ond") === 0 || $text=="01pogoa")
-{
+elseif($text == "/ond" || $text=="01pogoa") {
    $response = "Link gruppo Onde coerenti: laser, olografia, teletrasporto: https://t.me/joinchat/AWHhTUYqi5f1IIC2K3CDkg";
 }
-elseif(strpos($text, "/ott") === 0 || $text=="01qnkoa")
-{
+elseif($text == "/ott" || $text=="01qnkoa") {
    $response = "Link gruppo Ottimizzazione per il Problem Solving: https://t.me/joinchat/AWHhTUolQqSpo0QxI-s0dA";
 }
-elseif(strpos($text, "/amb") === 0 || $text=="01qzpoa")
-{
+elseif($text == "/amb" || $text=="01qzpoa") {
    $response = "Link gruppo Ambient Intelligence: https://t.me/joinchat/AWHhTUTOaRH7MHjsO5xaSA";
 }
-elseif(strpos($text, "/rsc") === 0 || $text=="01qfxoa")
-{
+elseif($text == "/rsc" || $text=="01qfxoa") {
    $response = "Link gruppo Reti e sistemi complessi: fenomeni fisici e interazioni sociali: https://t.me/joinchat/AWHhTVJfjtrH3pgFmalv0g";
 }
-elseif(strpos($text, "/viq") === 0 || $text=="01qznoa")
-{
+elseif($text == "/viq" || $text=="01qznoa") {
    $response = "Link gruppo Visualizzazione dell'Informazione Quantitativa: https://t.me/joinchat/AWHhTVL6TpOspoLCUzP4WA";
 }
 
@@ -696,12 +601,10 @@ elseif(strpos($text, "/viq") === 0 || $text=="01qznoa")
 //	CREDITI LIBERI DEL III ANNO (NON CONSIGLIATI DAL CORSO DI STUDI)
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/inc") === 0 || $text=="01samoa")
-{
+elseif($text == "/inc" || $text=="01samoa") {
    $response = "Link gruppo Inclusive design nelle scienze dell'architettura e dell'ingegneria: https://t.me/joinchat/AWHhTUa2xfmNY-UNyxgMVA";
 }
-elseif(strpos($text, "/lat") === 0 || $text=="01njaoa")
-{
+elseif($text == "/lat" || $text=="01njaoa") {
    $response = "Link gruppo Sicurezza e legislazione dell'ambiente e del territorio: https://t.me/joinchat/AWHhTVJ5F_4oRtNhHwkCSw";
 }
 
@@ -709,28 +612,22 @@ elseif(strpos($text, "/lat") === 0 || $text=="01njaoa")
 //	ALTRI GRUPPI (BAR, RAPPRESENTANTI, TIROCINIO)
 //----------------------------------------------------------------------------------------
 
-elseif(strpos($text, "/bar") === 0 || $text=="cazzeggio")
-{
+elseif($text == "/bar" || $text=="cazzeggio") {
 	$response = "Link gruppo Bar Corinto: https://t.me/joinchat/AWHhTT7puKoVi_n-L43e1A";
 }
-elseif(strpos($text, "/rappr") === 0 || $text=="rappresentanti")
-{
+elseif($text == "/rappr" || $text=="rappresentanti") {
 	$response = "Link gruppo per segnalazioni ai Rappresentanti degli Studenti di Ingegneria Informatica: https://t.me/joinchat/AAAAAEQPNY4huYYBbDOcLQ";
 }
-elseif(strpos($text, "/tir") === 0 || $text=="tirocinio")
-{
+elseif($text == "/tir" || $text=="tirocinio") {
 	$response = "Link gruppo Tirocinio (triennale): https://t.me/joinchat/ArB62At04ai_qE0UWvXbxQ";
 }
-elseif(strpos($text, "/libri") === 0 || $text=="libri")
-{
+elseif($text == "/libri" || $text=="libri") {
 	$response = "Link gruppo compravendita libri e appunti: https://t.me/joinchat/AWHhTUmEZ0LiDxFNxK2dEA";
 }
-elseif(strpos($text, "/ripetizioni") === 0 || $text=="ripetizioni")
-{
+elseif($text == "/ripetizioni" || $text=="ripetizioni") {
 	$response = "Link gruppo cerco o offro ripetizioni: https://t.me/joinchat/AWHhTUMgrCpThX8coTPN6g";
 }
-elseif(strpos($text, "/changelog") === 0 || $text=="changelog")
-{
+elseif($text == "/changelog" || $text=="changelog") {
 	$response = "Link canale per aggiornamenti sul bot: https://t.me/joinchat/AAAAAEfq4quRqMjvfLiMAg";
 }
 $parameters = array('chat_id' => $chatId, "text" => $response);
