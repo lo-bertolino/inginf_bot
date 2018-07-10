@@ -50,14 +50,15 @@ if($text == "/start") {
 	$response = <<<EOT
 Ciao $firstname, benvenuto/a!
 Puoi utilizzare il bot in più modi:
-- Inserendo manualmente il codice dell'esame (ad esempio '18AULOA', senza apici),
-- Inserendo un'abbreviazione, ad esempio /apa.
+- Inserendo il codice dell'esame (ad esempio <pre>18AULOA</pre>, senza apici),
+- Inserendo un'abbreviazione, ad esempio <pre>/apa</pre>.
+
 Se vuoi un gruppo per parlare di qualsiasi cosa (cazzeggio), vai al /bar usando questo comando. ;)
 Se hai bisogno del gruppo dei Rappresentanti degli Studenti, puoi trovarlo tramite il comando /rappresentanti.
 Per la compravendita di libri o appunti, parlatene su /libri, mentre se avete bisogno di ripetizioni, andandate su /ripetizioni. Se sei alla ricerca di un gruppo generale sul tirocinio (triennale), usa subito il comando /tirocinio. Se usi Linux troverai interessante @linuxpolito. 
 Ho anche creato un canale per chi vuole seguire i cambiamenti del bot (/changelog).
 
-Non conoscete tutte le abbreviazioni o i codici? Nessun problema! Potete generare una lista di tutti i corsi per i quali è disponibile un gruppo seguendo le istruzioni di seguito (il bot NON è case sensitive, per cui potete scrivere come volete):
+Non conoscete tutte le abbreviazioni o i codici? Nessun problema! Potete generare una lista di tutti i corsi per i quali è disponibile un gruppo seguendo le istruzioni di seguito (il bot <b>non</b> è case sensitive, per cui potete scrivere come volete):
 
 Desideri il link per i corsi di laurea triennale o magistrale? Usa il comando /triennale o /magistrale."
 EOT;
@@ -135,6 +136,6 @@ EOT;
 	}
 }
 
-$parameters = array('chat_id' => $chatId, 'text' => $response);
+$parameters = array('chat_id' => $chatId, 'text' => $response, 'parse_mode' => 'HTML');
 $parameters['method'] = 'sendMessage';
 echo json_encode($parameters);
