@@ -75,7 +75,7 @@ EOT;
 				if($textUpper === $stuff['code']) {
 					$command = $key;
 					break;
-				} else if(is_array($stuff['code']) && array_key_exists($textUpper, $stuff['code'])) {
+				} else if(is_array($stuff['code']) && isset($stuff['code'][$textUpper])) {
 					$command = $key;
 					break;
 				}
