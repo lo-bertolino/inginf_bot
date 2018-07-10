@@ -69,9 +69,14 @@ EOT;
 	} else if(preg_match('#\d\d\w\w\w\w\w#', $text) === 1) {
 		$textUpper = strtoupper($text);
 		foreach($database as $key => $stuff) {
-			if(isset($stuff['code']) && $textUpper = $stuff['code']) {
-				$command = $key;
-				break;
+			if(isset($stuff['code'])) {
+				if($textUpper === $stuff['code']) {
+					$command = $key;
+					break;
+				} else if(is_array($stuff['code']) && array_key_exists($textUpper, $stuff['code'])) {
+					$command = $key;
+					break;
+				}
 			}
 		}
 		unset($textUpper);
