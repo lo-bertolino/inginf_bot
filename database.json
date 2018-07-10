@@ -1,0 +1,824 @@
+{
+  "triennale": {
+    "groupname": "Triennale",
+    "sections": [
+      {
+        "name": "II ANNO",
+        "courses": [
+          "apa",
+          "elt",
+          "cae",
+          "an2",
+          "met",
+          "fis2",
+          "bda",
+          "oop"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "eapp",
+          "eam",
+          "cir",
+          "sop",
+          "reti",
+          "tes",
+          "cau",
+          "stm"
+        ]
+      },
+      {
+        "name": "Altri corsi",
+        "text": [
+          "Visti i problemi con alcuni corsi in fase di spegnimento, potete trovare i link ai corsi necessari qui sotto:",
+          "SISTEMI E TECNOLOGIE ELETTRONICHE:",
+          "/ste - Sistemi e Tecnologie Elettroniche (10 crediti, Ingegneria Informatica) (01NVAOA)",
+          "TEORIA ED ELABORAZIONE DEI SEGNALI:",
+          "i) /ts2 - Teoria ed Elaborazione dei Segnali (10 crediti, Ingegneria Informatica) (01MOOOA)",
+          "ii) /tsc - Teoria dei Segnali e delle Comunicazioni (10 crediti, Ingegneria Elettronica) (01NVCNX)",
+          "ELETTRONICA APPLICATA E MISURE:",
+          "i) /eam - Elettronica Applicata e Misure (10 crediti, Ingegneria Informatica) (03MOAOA)",
+          "ii) /cir - Electronic Circuits (10 crediti, Ingegneria Elettronica/ECE) (02OIGNX)"
+        ]
+      },
+      {
+        "name": "English courses YEAR 2",
+        "courses": [
+          "engalg",
+          "engcth",
+          "engma2",
+          "engph2",
+          "engarc",
+          "engidb",
+          "engmme",
+          "engoop"
+        ]
+      },
+      {
+        "name": "English courses YEAR 3",
+        "courses": [
+          "engnet",
+          "engesm",
+          "engoss",
+          "engsap",
+          "engael",
+          "engctr"
+        ]
+      },
+      {
+        "name": "Crediti liberi terzo anno",
+        "courses": [
+          "viq",
+          "nan",
+          "lic",
+          "ond",
+          "ott",
+          "amb",
+          "rsc",
+          "inc",
+          "lat"
+        ]
+      }
+    ],
+    "link": "https://t.me/IngInfTriennale"
+  },
+  "apa": {
+    "code": "03MNOOA",
+    "name": "Algoritmi e Programmazione",
+    "link": "https://t.me/joinchat/AAAAAEHJKLIFYe4H8DyAsw"
+  },
+  "elt": {
+    "code": "18AULOA",
+    "name": "Elettrotecnica",
+    "link": "https://t.me/joinchat/AAAAAD9BpcnchBLUEnioVQ"
+  },
+  "cae": {
+    "code": "12AGAOA",
+    "name": "Calcolatori Elettronici",
+    "link": "https://t.me/joinchat/AAAAAEJuFpWQh_MlqR-dqQ"
+  },
+  "an2": {
+    "code": "23ACIOA",
+    "name": "Analisi II",
+    "link": "https://t.me/joinchat/AAAAAD-5K7MDuHb7okBIrw"
+  },
+  "met": {
+    "code": "06BQXOA",
+    "name": "Metodi Matematici per l'Ingegneria",
+    "link": "https://t.me/joinchat/AAAAAEB7eu7kwNY1flGUTw"
+  },
+  "fis2": {
+    "code": "03AXPOA",
+    "name": "Fisica II",
+    "link": "https://t.me/joinchat/AAAAAEI4s2zTMZiN55Ccuw"
+  },
+  "bda": {
+    "code": "14AFQOA",
+    "name": "Basi di Dati",
+    "link": "https://t.me/joinchat/AWHhTUKBnKp-ImghkayQUw"
+  },
+  "oop": {
+    "code": "09CBIOA",
+    "name": "Programmazione a Oggetti",
+    "link": "https://t.me/joinchat/AWHhTUGhuCoTqgsfyEMRpQ"
+  },
+  "eapp": {
+    "code": "08ATIOA",
+    "name": "Elettronica Applicata",
+    "link": "https://t.me/joinchat/AWHhTUJ1hBm_rp8qI0EJAA"
+  },
+  "sop": {
+    "code": "05CJCOA",
+    "name": "Sistemi Operativi",
+    "link": "https://t.me/joinchat/AWHhTT-Vihh0I05WwX1Aaw"
+  },
+  "reti": {
+    "code": "12CDUOA",
+    "name": "Reti di Calcolatori",
+    "link": "https://t.me/joinchat/AWHhTUBMQiRlNy8eoYtNew"
+  },
+  "tes": {
+    "code": "02MOOOA",
+    "name": "Teoria ed Elaborazione dei Segnali",
+    "link": "https://t.me/joinchat/AWHhTUPuGqC7DZATBQZnrw"
+  },
+  "cau": {
+    "code": "18AKSOA",
+    "name": "Controlli Automatici",
+    "link": "https://t.me/joinchat/AWHhTUGegJC71E_pLMloJg"
+  },
+  "stm": {
+    "code": "01QXVOA",
+    "name": "Sistemi Elettronici, Tecnologie e Misure",
+    "link": "https://t.me/joinchat/AWHhTULsNdVmOVv2H9cphQ"
+  },
+  "eam": {
+    "code": "03MOAOA",
+    "name": "Elettronica Applicata e Misure (corso da 10 crediti)",
+    "link": "https://t.me/joinchat/AWHhTT5FCYe0hB6IUJXoZw"
+  },
+  "cir": {
+    "code": "02OIGNX",
+    "name": "Electronic Circuits (corso da 10 crediti, Ingegneria Elettronica/ECE)",
+    "link": "https://t.me/joinchat/AWHhTURqgvY3Gp3VivBfgA"
+  },
+  "ste": {
+    "code": "01NVAOA",
+    "name": "Sistemi e Tecnologie Elettroniche",
+    "link": "https://t.me/joinchat/AAAAAD__AD2-iXQW1EBuZQ"
+  },
+  "ts2": {
+    "code": "01MOOOA",
+    "name": "Teoria ed Elaborazione dei Segnali (corso da 10 crediti)",
+    "link": "https://t.me/joinchat/AWHhTUDvj28xdfBC9PDzNw"
+  },
+  "tsc": {
+    "code": "01NVCNX",
+    "name": "Teoria dei Segnali e delle Comunicazioni (corso da 10 crediti, Ingegneria Elettronica)",
+    "link": "https://t.me/joinchat/AWHhTUNm_uMTfFJYSO7phw"
+  },
+  "engalg": {
+    "code": "02OGDLM",
+    "name": "Algorithms and Programming",
+    "link": "https://t.me/joinchat/AWHhTVDwMJ5Oq8OUqALwyA"
+  },
+  "engcth": {
+    "code": "02OFZLM",
+    "name": "Circuit Theory",
+    "link": "https://t.me/joinchat/AWHhTVJERkuPvOnuP0DKNw"
+  },
+  "engma2": {
+    "code": "03KXULM",
+    "name": "Mathematical Analysis II",
+    "link": "https://t.me/joinchat/AWHhTUR8n0FbqRdLI1Fvbw"
+  },
+  "engph2": {
+    "code": "02KXWLM",
+    "name": "Physics II",
+    "link": "https://t.me/joinchat/AWHhTUYr6p2tvvJYVL84Iw"
+  },
+  "engarc": {
+    "code": "02KTMLM",
+    "name": "Computer Architectures",
+    "link": "https://t.me/joinchat/AWHhTUikUB8uHnGM7OXCIg"
+  },
+  "engidb": {
+    "code": "01RKWLM",
+    "name": "Introduction to Databases",
+    "link": "https://t.me/joinchat/AWHhTVF7uJ9ZfhiZLuMmJw"
+  },
+  "engmme": {
+    "code": "04LSILM",
+    "name": "Mathematical Methods",
+    "link": "https://t.me/joinchat/AWHhTULOFNQ5AGfoufhduA"
+  },
+  "engoop": {
+    "code": "04JEYLM",
+    "name": "Object Oriented Programming",
+    "link": "https://t.me/joinchat/AWHhTUyb9a4zv2wpKCbkfA"
+  },
+  "engnet": {
+    "code": "05KSILM",
+    "name": "Computer Networks",
+    "link": "https://t.me/joinchat/AWHhTUomL7dw-oQ5Ll9rwA"
+  },
+  "engesm": {
+    "code": "01QXWLM",
+    "name": "Electronic Systems, Technologies and Measurements",
+    "link": "https://t.me/joinchat/AWHhTUlTn2711XWBDvfTew"
+  },
+  "engoss": {
+    "code": "04JEZLM",
+    "name": "Operting Systems",
+    "link": "https://t.me/joinchat/AWHhTVKjMNLLRymIk6BkPQ"
+  },
+  "engsap": {
+    "code": "04JEZLM",
+    "name": "Signal Analysis and Processing",
+    "link": "https://t.me/joinchat/AWHhTVGAuGeF-ysnlluRog"
+  },
+  "engael": {
+    "code": "03MZGLM",
+    "name": "Applied Electronics",
+    "link": "https://t.me/joinchat/AWHhTUXy03Z2hB6ptas5eA"
+  },
+  "engctr": {
+    "code": "06LSLLM",
+    "name": "Automatic Control",
+    "link": "https://t.me/joinchat/AWHhTUu7VarTVqlRt6sNnA"
+  },
+  "nan": {
+    "code": "02JNUOA",
+    "name": "Introduzione alle Nanotecnologie",
+    "link": "https://t.me/joinchat/AWHhTUvhWxmxwYidlgB-ww"
+  },
+  "lic": {
+    "code": "01QZDOA",
+    "name": "Laboratori di Internet e Comunicazioni",
+    "link": "https://t.me/joinchat/AWHhTUpJkSBVrP2afTm4rA"
+  },
+  "ond": {
+    "code": "01POGOA",
+    "name": "Onde coerenti: laser, olografia, teletrasporto",
+    "link": "https://t.me/joinchat/AWHhTUYqi5f1IIC2K3CDkg"
+  },
+  "ott": {
+    "code": "01QNKOA",
+    "name": "Ottimizzazione per il Problem Solving",
+    "link": "https://t.me/joinchat/AWHhTUolQqSpo0QxI-s0dA"
+  },
+  "amb": {
+    "code": "01QZPOA",
+    "name": "Ambient Intelligence",
+    "link": "https://t.me/joinchat/AWHhTUTOaRH7MHjsO5xaSA"
+  },
+  "rsc": {
+    "code": "01QFXOA",
+    "name": "Reti e sistemi complessi: fenomeni fisici e interazioni sociali",
+    "link": "https://t.me/joinchat/AWHhTVJfjtrH3pgFmalv0g"
+  },
+  "viq": {
+    "code": "01QZNOA",
+    "name": "Visualizzazione dell'Informazione Quantitativa",
+    "link": "https://t.me/joinchat/AWHhTVL6TpOspoLCUzP4WA"
+  },
+  "magistrale": {
+    "groupname": "Magistrale",
+    "text": [
+      "A quale indirizzo appartieni?",
+      "/aut - Automatica",
+      "/dat - Data Science",
+      "/emb - Embedded Systems",
+      "/mul - Grafica e Multimedia",
+      "/net - Reti",
+      "/soft - Software",
+      "/sds - Software e Sistemi Digitali",
+      "Se cerchi il link al gruppo generale per le magistrali, lo trovi qui: https://t.me/IngInfMagistrale"
+    ]
+  },
+  "aut": {
+    "groupname": "LM Automatica",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "ase",
+          "dms",
+          "tsr",
+          "mod",
+          "copt",
+          "swe",
+          "nlc",
+          "pst"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "acs",
+          "dct",
+          "mdcs",
+          "saa",
+          "rob",
+          "est"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTURKgyOJ1D7d6WP2wg"
+  },
+  "dat": {
+    "groupname": "LM Data Science",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "ase",
+          "isys",
+          "dms",
+          "tsr",
+          "bigd",
+          "swe",
+          "dp1",
+          "pst"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "sic",
+          "dp2",
+          "iar",
+          "app",
+          "swd",
+          "mad"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTQ66iEgxxMnTFXqfjQ"
+  },
+  "emb": {
+    "groupname": "LM Embedded Systems",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "ees",
+          "ase",
+          "ose",
+          "spec",
+          "mic",
+          "swe",
+          "sods"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "ems",
+          "mes",
+          "soc",
+          "tft",
+          "sdp"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTUA7Khy9tYQA_5jOUw"
+  },
+  "net": {
+    "groupname": "LM Reti",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "dsp",
+          "dct",
+          "mod",
+          "mdcs",
+          "oma",
+          "rob",
+          "ase",
+          "dms",
+          "tsr",
+          "swe",
+          "dp1",
+          "prl",
+          "pst"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "dp2",
+          "sic",
+          "par",
+          "app",
+          "imul",
+          "mad"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTUNZJ7XpXMpjoMOXXg"
+  },
+  "soft": {
+    "groupname": "LM Software",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "ase",
+          "dms",
+          "tsr",
+          "oma",
+          "lan",
+          "swe",
+          "dp1",
+          "pst"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "dp2",
+          "sic",
+          "iar",
+          "app",
+          "imul",
+          "swd",
+          "mad"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTUGPMG-KizTjRVAlzQ"
+  },
+  "sds": {
+    "groupname": "LM Software e Sistemi Digitali",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "ase",
+          "dms",
+          "tsr",
+          "spec",
+          "swe",
+          "dp1",
+          "pst",
+          "sods"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "dp2",
+          "dsp",
+          "dct",
+          "mod",
+          "mdcs",
+          "oma",
+          "rob",
+          "sic",
+          "ems",
+          "iar",
+          "soc",
+          "mad",
+          "sdp"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTUG4UmF1GKZlQMS-2A"
+  },
+  "mul": {
+    "groupname": "LM Grafica e Multimedia",
+    "sections": [
+      {
+        "name": "I ANNO",
+        "courses": [
+          "dsp",
+          "dct",
+          "mod",
+          "mdcs",
+          "oma",
+          "ase",
+          "dms",
+          "tsr",
+          "imul",
+          "infg",
+          "swe",
+          "pst"
+        ]
+      },
+      {
+        "name": "II ANNO",
+        "courses": [
+          "cvis",
+          "ead",
+          "rvir",
+          "sic",
+          "can",
+          "msp"
+        ]
+      }
+    ],
+    "link": "https://t.me/joinchat/AWHhTUMvFkikgpfQKb6EtA"
+  },
+  "ase": {
+    "code": [
+      "02GOLOV",
+      "02LSEOV"
+    ],
+    "name": "Architetture dei Sistemi di Elaborazione - Computer architectures",
+    "link": "https://t.me/joinchat/AWHhTURjlmKrmEATdPn9pw"
+  },
+  "dms": {
+    "code": [
+      "01NVVOV",
+      "01NVUOV"
+    ],
+    "name": "Sistemi per la Gestione di Basi di Dati - Database Management Systems",
+    "link": "https://t.me/joinchat/AWHhTUPmlkk3NGwiyBwH3g"
+  },
+  "tsr": {
+    "code": [
+      "02KPNOV",
+      "01OTWOV"
+    ],
+    "name": "Tecnologie e Servizi di Rete - Computer Network Technologies and Services",
+    "link": "https://t.me/joinchat/AWHhTUMRFDzAiBNEDwB22Q"
+  },
+  "mod": {
+    "code": "01NNEOV",
+    "name": "Modelli e Sistemi a Eventi Discreti",
+    "link": "https://t.me/joinchat/AWHhTUPsL97g4IGggoJFig"
+  },
+  "copt": {
+    "code": "01OUWOV",
+    "name": "Convex Optimization and Engineering Applications",
+    "link": "https://t.me/joinchat/AWHhTUIrWgfwr2Y4NBWaJw"
+  },
+  "swe": {
+    "code": [
+      "05BIDOV",
+      "04GSPOV"
+    ],
+    "name": "Ingegneria del Software - Software Engineering",
+    "link": "https://t.me/joinchat/AWHhTUO1VW4d5BI_bfVVZg"
+  },
+  "nlc": {
+    "code": "01RKXOV",
+    "name": "Nonlinear Control and Aerospace Applications",
+    "link": "https://t.me/joinchat/AWHhTUPY8S9IzWMk495LUA"
+  },
+  "pst": {
+    "code": [
+      "02GRSOV",
+      "01NYHOV"
+    ],
+    "name": "Programmazione di Sistema - System and Device Programming",
+    "link": "https://t.me/joinchat/AWHhTUKL2mCjq7SyuVbD8Q"
+  },
+  "acs": {
+    "code": "03MIQOV",
+    "name": "Automotive Control Systems",
+    "link": "https://t.me/joinchat/AWHhTUM7AuEWZNDdRvK96w"
+  },
+  "rob": {
+    "code": "04CFIOV",
+    "name": "Robotica",
+    "link": "https://t.me/joinchat/AWHhTUQGYLLB3lSuCnl3qw"
+  },
+  "est": {
+    "code": "01RKYOV",
+    "name": "Estimation, Filtering, and System Identification",
+    "link": "https://t.me/joinchat/AWHhTUPAZsjQq21kQd9fxQ"
+  },
+  "dct": {
+    "code": "01PDCOV",
+    "name": "Digital Control Technologies and Architectures",
+    "link": "https://t.me/joinchat/AWHhTULlHt-cjohj2ANC6w"
+  },
+  "mdcs": {
+    "code": "01PDXOV",
+    "name": "Modern Design of Control Systems",
+    "link": "https://t.me/joinchat/AWHhTUNB66W58CJ88Rss7Q"
+  },
+  "saa": {
+    "code": "01PECOV",
+    "name": "Software Architecture for Automation",
+    "link": "https://t.me/joinchat/AWHhTUNj9WyIn4kAlZFtBQ"
+  },
+  "isys": {
+    "code": "01PDWOV",
+    "name": "Information Systems",
+    "link": "https://t.me/joinchat/AWHhTUPpBagsQUS0H-6mBw"
+  },
+  "bigd": {
+    "code": "01QYDOV",
+    "name": "Big Data: Architectures and Data Analytics",
+    "link": "https://t.me/joinchat/AWHhTUNOnQuT93-l4Tot9g"
+  },
+  "dp1": {
+    "code": [
+      "03MQPOV",
+      "01NVWOV"
+    ],
+    "name": "Programmazione Distribuita I - Distributed Programming I",
+    "link": "https://t.me/joinchat/AWHhTQxBVpvTQutrKIG8hQ"
+  },
+  "sic": {
+    "code": [
+      "03GSDOV",
+      "02KRQOV"
+    ],
+    "name": "Sicurezza dei Sistemi Informatici - Computer System Security",
+    "link": "https://t.me/joinchat/AWHhTQt5GdlO5P8RLvAyCw"
+  },
+  "dp2": {
+    "code": "01PDVOV",
+    "name": "Distributed Programming II",
+    "link": "https://t.me/joinchat/AWHhTUNK_dNO4V18B6Kvaw"
+  },
+  "iar": {
+    "code": "01BITOV",
+    "name": "Intelligenza Artificiale",
+    "link": "https://t.me/joinchat/AWHhTUN4agtRqrzYqvL77Q"
+  },
+  "app": {
+    "code": "02JGROV",
+    "name": "Applicazioni Internet",
+    "link": "https://t.me/joinchat/AWHhTUJzjk5k6B1b9zE8GQ"
+  },
+  "swd": {
+    "code": "01RMZOV",
+    "name": "Interdisciplinary Software Design Project",
+    "link": "https://t.me/joinchat/AWHhTUK9dabZaLd9z0GJfQ"
+  },
+  "mad": {
+    "code": "01PFPOV",
+    "name": "Mobile Application Development",
+    "link": "https://t.me/joinchat/AWHhTUEP8ias1fCdcUWEbw"
+  },
+  "ees": {
+    "code": "01NWMOV",
+    "name": "Electronics for Embedded Systems",
+    "link": "https://t.me/joinchat/AWHhTUSA4kL-LtGmh7tsqw"
+  },
+  "ose": {
+    "code": "02NPSOV",
+    "name": "Operating Systems for Embedded Systems",
+    "link": "https://t.me/joinchat/AWHhTUMWVK4q7DlUXSsxfQ"
+  },
+  "spec": {
+    "code": "02LQDOV",
+    "name": "Specification and Simulation of Digital Systems",
+    "link": "https://t.me/joinchat/AWHhTUBs2ugzzYBlG01O5A"
+  },
+  "mic": {
+    "code": "01NOYOV",
+    "name": "Microelectronic Systems",
+    "link": "https://t.me/joinchat/AWHhTUHR0ZM2x4lyKOB41A"
+  },
+  "sods": {
+    "code": "02NVNOV",
+    "name": "Synthesis and Optimization of Digital Systems",
+    "link": "https://t.me/joinchat/AWHhTUJPnnzxDxG_0os8fg"
+  },
+  "ems": {
+    "code": "01QYOOV",
+    "name": "Energy Management in Mobile Systems",
+    "link": "https://t.me/joinchat/AWHhTQvbYx1vIZWd5Hk3cg"
+  },
+  "mes": {
+    "code": "01NWNOV",
+    "name": "Modeling and Optimization of Embedded Systems",
+    "link": "https://t.me/joinchat/AWHhTUMrdejsGdpiuSU-4Q"
+  },
+  "soc": {
+    "code": "01QYHOV",
+    "name": "System-on-Chip Architecture",
+    "link": "https://t.me/joinchat/AWHhTUPjFmWgcVoKZZ1MCA"
+  },
+  "tft": {
+    "code": "01RKZOV",
+    "name": "Testing and Fault Tolerance",
+    "link": "https://t.me/joinchat/AWHhTURP9ddxzHfkAuIwKg"
+  },
+  "sdp": {
+    "code": "01RLAOV",
+    "name": "System Design Project",
+    "link": "https://t.me/joinchat/AWHhTUFbpvyBXrVK-IYtZg"
+  },
+  "imul": {
+    "code": "02GPJOV",
+    "name": "Elaborazione e Trasmissione di Informazioni Multimediali",
+    "link": "https://t.me/joinchat/AWHhTUO9HK87c9lIbGDLQg"
+  },
+  "infg": {
+    "code": "02BHIOV",
+    "name": "Informatica Grafica",
+    "link": "https://t.me/joinchat/AWHhTUPaE0q_oPS6kbM7YQ"
+  },
+  "can": {
+    "code": "01NPZOV",
+    "name": "Computer Animation",
+    "link": "https://t.me/joinchat/AWHhTUL8DASAciXmc5HwMA"
+  },
+  "msp": {
+    "code": "01NPZOV",
+    "name": "Multimedia Signal Processing",
+    "link": "https://t.me/joinchat/AWHhTT75pIwnjSInCfbq0w"
+  },
+  "dsp": {
+    "code": "01RLPOV",
+    "name": "Data Spaces",
+    "link": "https://t.me/joinchat/AWHhTUKeSQsTFCzr5kmXgw"
+  },
+  "oma": {
+    "code": "01OUVOV",
+    "name": "Optimization Methods and Algorithms",
+    "link": "https://t.me/joinchat/AWHhTUJDrXyZ-e7HPTpCwQ"
+  },
+  "cvis": {
+    "code": "04ISFOV",
+    "name": "Computer Vision",
+    "link": "https://t.me/joinchat/AWHhTUNOjVKUWjusEKYi5A"
+  },
+  "ead": {
+    "code": "01NWPOV",
+    "name": "Elaborazione dell'Audio Digitale",
+    "link": "https://t.me/joinchat/AWHhTQt7_AggPc9VohR6HA"
+  },
+  "rvir": {
+    "code": "02KVEOV",
+    "name": "Realtà virtuale",
+    "link": "https://t.me/joinchat/AWHhTUJJ6SFtoPh6w2BAJA"
+  },
+  "prl": {
+    "code": "01NVYOV",
+    "name": "Progetto di Reti Locali",
+    "link": "https://t.me/joinchat/AWHhTUQ1ZNHIYYOQQvL-lQ"
+  },
+  "par": {
+    "code": "01NVZOV",
+    "name": "Protocolli e Architetture di Routing",
+    "link": "https://t.me/joinchat/AWHhTUJh9tnkVhYIR8dNag"
+  },
+  "lan": {
+    "code": "02JEUOV",
+    "name": "Formal Languages and Compilers",
+    "link": "https://t.me/joinchat/AWHhTUGmiW2ivq1_vYj9AA"
+  },
+  "inc": {
+    "code": "01SAMOA",
+    "name": "Inclusive design nelle scienze dell'architettura e dell'ingegneria",
+    "link": "https://t.me/joinchat/AWHhTUa2xfmNY-UNyxgMVA"
+  },
+  "lat": {
+    "code": "01NJAOA",
+    "name": "Sicurezza e legislazione dell'ambiente e del territorio",
+    "link": "https://t.me/joinchat/AWHhTVJ5F_4oRtNhHwkCSw"
+  },
+  "altro": {
+    "groupname": "Altro",
+    "courses": [
+      "bar",
+      "rappr",
+      "tir",
+      "linux",
+      "libri",
+      "ripetizioni",
+      "changelog"
+    ],
+    "link": "https://t.me/IngInfTriennale"
+  },
+  "bar": {
+    "name": "Bar Corinto",
+    "link": "https://t.me/joinchat/AWHhTT7puKoVi_n-L43e1A"
+  },
+  "linux": {
+    "name": "Gruppo dedicato a Linux",
+    "wrap": false,
+    "link": "@linuxpolito"
+  },
+  "rappresentanti": {
+    "name": "per segnalazioni ai Rappresentanti degli Studenti di Ingegneria Informatica",
+    "link": "https://t.me/joinchat/AAAAAEQPNY4huYYBbDOcLQ"
+  },
+  "tirocinio": {
+    "name": "Tirocinio (triennale)",
+    "link": "https://t.me/joinchat/ArB62At04ai_qE0UWvXbxQ"
+  },
+  "libri": {
+    "name": "compravendita libri e appunti",
+    "link": "https://t.me/joinchat/AWHhTUmEZ0LiDxFNxK2dEA"
+  },
+  "ripetizioni": {
+    "name": "cerco o offro ripetizioni",
+    "link": "https://t.me/joinchat/AWHhTUMgrCpThX8coTPN6g"
+  },
+  "changelog": {
+    "name": "Link canale per aggiornamenti sul bot",
+    "wrap": false,
+    "link": "https://t.me/joinchat/AAAAAEfq4quRqMjvfLiMAg"
+  }
+}
