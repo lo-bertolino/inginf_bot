@@ -782,14 +782,14 @@
     "groupname": "Altro",
     "courses": [
       "bar",
-      "rappr",
-      "tir",
+      "rappresentanti",
+      "tirocinio",
       "linux",
       "libri",
       "ripetizioni",
-      "changelog"
-    ],
-    "link": "https://t.me/IngInfTriennale"
+      "changelog",
+      "source"
+    ]
   },
   "bar": {
     "name": "Bar Corinto",
@@ -820,5 +820,10 @@
     "name": "Link canale per aggiornamenti sul bot",
     "wrap": false,
     "link": "https://t.me/joinchat/AAAAAEfq4quRqMjvfLiMAg"
+  },
+  "source": {
+    "name": "Codice sorgente del bot",
+    "wrap": false,
+    "link": "https://github.com/atlas-ark/inginf_bot/"
   }
 }

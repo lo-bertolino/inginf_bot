@@ -127,7 +127,7 @@ EOT;
 			} else {
 				// Stampa in quest'altra maniera (e.g. tutti i corsi)
 				$course = printcourse(null, $entry, false);
-				$response = "Link gruppo $course: ${$entry['link']}";
+				$response = "Link gruppo $course: " . $entry['link'];
 			}
 		}
 	} else {
