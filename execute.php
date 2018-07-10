@@ -97,7 +97,7 @@ EOT;
 		if(isset($entry['groupname'])) {
 			// È un elenco (e.g. /triennale)
 			$preview = false;
-			$response = "Bene, ecco una lista con i vari codici:\n";
+			$response = "Bene, ecco una lista di gruppi:\n";
 			if(isset($entry['link'])) {
 				// C'è un link al gruppo (e.g. sì in /triennale, no in /altro)
 				$response .= "Link al gruppo generale (${entry['groupname']}): ${entry['link']}\n";
@@ -117,14 +117,14 @@ EOT;
 					if(isset($section['courses'])) {
 						// Se c'è un elenco di corsi (e.g. dappertutto tranne /triennale -> Altri corsi)
 						foreach($section['courses'] as $course) {
-							$response .= printcourse(null, $database[$course]);
+							$response .= '- ' . printcourse(null, $database[$course]);
 						}
 					}
 				}
 			} else if(isset($entry['courses'])) {
 				// C'è un solo elenco di corsi (e.g. /altro)
 				foreach($entry['courses'] as $course) {
-					$response .= printcourse(null, $database[$course]);
+					$response .= '- ' . printcourse(null, $database[$course]);
 				}
 			}
 			// O se non c'è altro (e.g. /magistrale)
