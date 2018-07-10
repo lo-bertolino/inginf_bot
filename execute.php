@@ -18,6 +18,7 @@ $text = strtolower(trim($text));
 
 header("Content-Type: application/json");
 $response = '';
+$preview = true;
 
 function printcourse($command, $course, $newline = true) {
 	if(isset($course['code'])) {
@@ -39,7 +40,13 @@ function printcourse($command, $course, $newline = true) {
 
 	$newline = $newline ? "\n" : '';
 
-	return "$command${course['name']}$code$newline";
+	$name = $course['name'];
+
+	if(isset($course['link'])) {
+		$name = "<a href=\"${course['link']}\">$name</a>";
+	}
+
+	return "$command$name$code$newline";
 }
 
 //========================================================================================
@@ -50,10 +57,10 @@ if($text == "/start") {
 	$response = <<<EOT
 Ciao $firstname, benvenuto/a!
 Puoi utilizzare il bot in più modi:
-- Inserendo il codice dell'esame (ad esempio <pre>18AULOA</pre>, senza apici),
-- Inserendo un'abbreviazione, ad esempio <pre>/apa</pre>.
+- Inserendo il codice dell'esame (ad esempio <b>18AULOA</b>, senza apici),
+- Inserendo un'abbreviazione, ad esempio /apa.
 
-Se vuoi un gruppo per parlare di qualsiasi cosa (cazzeggio), vai al /bar usando questo comando. ;)
+Se vuoi un gruppo per parlare di qualsiasi cosa (cazzeggio), vai al /bar usando questo comando. 😉
 Se hai bisogno del gruppo dei Rappresentanti degli Studenti, puoi trovarlo tramite il comando /rappresentanti.
 Per la compravendita di libri o appunti, parlatene su /libri, mentre se avete bisogno di ripetizioni, andandate su /ripetizioni. Se sei alla ricerca di un gruppo generale sul tirocinio (triennale), usa subito il comando /tirocinio. Se usi Linux troverai interessante @linuxpolito. 
 Ho anche creato un canale per chi vuole seguire i cambiamenti del bot (/changelog).
@@ -89,6 +96,7 @@ EOT;
 		$entry = $database[$command];
 		if(isset($entry['groupname'])) {
 			// È un elenco (e.g. /triennale)
+			$preview = false;
 			$response = "Bene, ecco una lista con i vari codici:\n";
 			if(isset($entry['link'])) {
 				// C'è un link al gruppo (e.g. sì in /triennale, no in /altro)
@@ -109,14 +117,14 @@ EOT;
 					if(isset($section['courses'])) {
 						// Se c'è un elenco di corsi (e.g. dappertutto tranne /triennale -> Altri corsi)
 						foreach($section['courses'] as $course) {
-							$response .= printcourse($course, $database[$course]);
+							$response .= printcourse(null, $database[$course]);
 						}
 					}
 				}
 			} else if(isset($entry['courses'])) {
 				// C'è un solo elenco di corsi (e.g. /altro)
 				foreach($entry['courses'] as $course) {
-					$response .= printcourse($course, $database[$course]);
+					$response .= printcourse(null, $database[$course]);
 				}
 			}
 			// O se non c'è altro (e.g. /magistrale)
@@ -136,6 +144,6 @@ EOT;
 	}
 }
 
-$parameters = array('chat_id' => $chatId, 'text' => $response, 'parse_mode' => 'HTML');
+$parameters = array('chat_id' => $chatId, 'text' => $response, 'parse_mode' => 'HTML', 'disable_web_page_preview' => !$preview);
 $parameters['method'] = 'sendMessage';
 echo json_encode($parameters);
