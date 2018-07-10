@@ -19,7 +19,7 @@ $text = strtolower(trim($text));
 header("Content-Type: application/json");
 $response = '';
 
-function printcourse($command, $course) {
+function printcourse($command, $course, $newline = true) {
 	if(isset($course['code'])) {
 		if(is_array($course['code'])) {
 			$code = implode(', ', $course['code']);
@@ -37,7 +37,9 @@ function printcourse($command, $course) {
 		$command = "/$command - ";
 	}
 
-	return "$command${course['name']}$code\n";
+	$newline = $newline ? "\n" : '';
+
+	return "$command${course['name']}$code$newline";
 }
 
 //========================================================================================
@@ -124,7 +126,7 @@ EOT;
 				$response = "${entry['name']}: ${entry['link']}";
 			} else {
 				// Stampa in quest'altra maniera (e.g. tutti i corsi)
-				$course = printcourse(null, $entry);
+				$course = printcourse(null, $entry, false);
 				$response = "Link gruppo $course: ${$entry['link']}";
 			}
 		}
