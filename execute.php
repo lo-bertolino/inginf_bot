@@ -140,7 +140,7 @@ EOT;
 			}
 		}
 	} else {
-		$response = 'nn o kpt :(';
+		$response = 'Comando non riconosciuto. Leggi il  messaggio /start per sapere come utilizzare il bot.';
 	}
 }
 
