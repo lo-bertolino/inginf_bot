@@ -3,7 +3,7 @@
     "groupname": "Triennale",
     "sections": [
       {
-        "name": "II ANNO",
+        "name": "II Anno - Italiano",
         "courses": [
           "apa",
           "elt",
@@ -16,7 +16,7 @@
         ]
       },
       {
-        "name": "II ANNO",
+        "name": "III Anno - Italiano",
         "courses": [
           "eapp",
           "eam",
@@ -44,7 +44,7 @@
         ]
       },
       {
-        "name": "English courses YEAR 2",
+        "name": "Year 2 - English",
         "courses": [
           "engalg",
           "engcth",
@@ -57,7 +57,7 @@
         ]
       },
       {
-        "name": "English courses YEAR 3",
+        "name": "Year 3 - English",
         "courses": [
           "engnet",
           "engesm",
